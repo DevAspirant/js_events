@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الاحداث </title>
+</head>
+<body>
+    <!-- لما المستخدم يقوم بالضغط على زر اضغط هنا -->
+    <input type="button" value="اضغط هنا" onclick="alert('تم الضغط');">
+    <!-- تبديل التصميم  -->
+    <input type="text" name="txtName" id="txtName" onfocus="changeStyle()">
+    <!--- استخدام event listener  -->
+    <h1 id="title">النص</h1>
+<script>
+    function changeStyle(){
+        let select = document.getElementById('txtName');
+        select.style.backgroundColor = 'beige';
+        select.style.border = '2px solid yellow';
+    }
+    let title = document.getElementById('title');
+    // callback
+    title.addEventListener('click',function(){
+        title.innerHTML = "تم الضغط على النص ";
+        title.style.backgroundColor = 'red';
+    });
+</script>
+</body>
+</html>
